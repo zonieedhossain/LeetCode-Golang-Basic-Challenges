@@ -122,9 +122,13 @@ git push origin feature/new-solution
 
 ## **Contribution Guidelines**
 ✅ **Well-optimized solution** (runtime beats at least **90%**).
+
 ✅ **Proper function naming & inline comments**.
+
 ✅ **Include a test case** in a separate `*_test.go` file.
+
 ✅ **Follow Go best practices** (error handling, variable naming, etc.).
+
 ✅ **Attach LeetCode runtime screenshot** (if possible) in the PR description.
 
 ---
