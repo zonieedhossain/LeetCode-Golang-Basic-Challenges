@@ -8,45 +8,44 @@ This repository provides a structured way to improve your **loops, conditionals,
 
 ## **Folder Structure**
 ```
-leetcode-golang-challenges/
-│── basic-loops-conditionals/
+basic-loops-conditionals/
 │   ├── fizz-buzz/
 │   ├── count-primes/
 │   ├── power-of-three/
 │   ├── divisor-game/
 │   ├── number-of-steps-to-zero/
-│── string-manipulation/
+string-manipulation/
 │   ├── reverse-string/
 │   ├── reverse-words-in-string-iii/
 │   ├── valid-palindrome/
 │   ├── longest-common-prefix/
 │   ├── first-unique-character/
-│── working-with-slices/
+working-with-slices/
 │   ├── maximum-subarray/
 │   ├── find-peak-element/
 │   ├── third-maximum-number/
 │   ├── kth-largest-element/
 │   ├── find-disappeared-numbers/
-│── algorithm-logic/
+algorithm-logic/
 │   ├── valid-palindrome/
 │   ├── palindrome-number/
 │   ├── longest-palindromic-substring/
 │   ├── palindrome-linked-list/
 │   ├── palindrome-partitioning/
-│── recursion/
+recursion/
 │   ├── factorial-trailing-zeroes/
 │   ├── climbing-stairs/
 │   ├── fibonacci-number/
 │   ├── pow-x-n/
 │   ├── generate-parentheses/
-│── sum-even-numbers/
+sum-even-numbers/
 │   ├── sum-even-numbers-queries/
 │   ├── two-sum/
 │   ├── count-odd-numbers/
 │   ├── add-digits/
 │   ├── subtract-product-sum/
-│── CONTRIBUTING.md
-│── README.md
+CONTRIBUTING.md
+README.md
 ```
 
 ---
@@ -54,7 +53,7 @@ leetcode-golang-challenges/
 ## **How to Contribute**
 1. **Fork this repository** and **clone your fork**
 ```bash
-git clone https://github.com/your-username/leetcode-golang-challenges.git
+git clone https://github.com/your-username/LeetCode-Golang-Basic-Challenges.git
 ```
 2. **Create a new branch** for your contribution:
 ```bash
@@ -72,20 +71,20 @@ package main
 import "strconv"
 
 func fizzBuzz(n int) []string {
-result := make([]string, n)
-for i := 1; i <= n; i++ {
-switch {
-case i%15 == 0:
-result[i-1] = "FizzBuzz"
-case i%3 == 0:
-result[i-1] = "Fizz"
-case i%5 == 0:
-result[i-1] = "Buzz"
-default:
-result[i-1] = strconv.Itoa(i)
-}
-}
-return result
+  result := make([]string, n)
+  for i := 1; i <= n; i++ {
+    switch {
+    case i%15 == 0:
+      result[i-1] = "FizzBuzz"
+    case i%3 == 0:
+      result[i-1] = "Fizz"
+    case i%5 == 0:
+      result[i-1] = "Buzz"
+    default:
+      result[i-1] = strconv.Itoa(i)
+    }
+  }
+  return result
 }
 ```
 5. **Write a test file (`solution_test.go`)** to verify correctness:
@@ -95,13 +94,13 @@ package main
 import "testing"
 
 func TestFizzBuzz(t *testing.T) {
-expected := []string{"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"}
-result := fizzBuzz(10)
-for i, v := range result {
-if v != expected[i] {
-t.Errorf("Expected %v but got %v at index %d", expected[i], v, i)
-}
-}
+  expected := []string{"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"}
+  result := fizzBuzz(10)
+  for i, v := range result {
+    if v != expected[i] {
+      t.Errorf("Expected %v but got %v at index %d", expected[i], v, i)
+    }
+  }
 }
 ```
 6. **Run tests to verify your solution:**
