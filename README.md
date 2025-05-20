@@ -1,4 +1,4 @@
-# 📌 LeetCode Golang Basic Challenges
+# LeetCode Golang Basic Challenges
 
 **Practice essential Golang concepts with curated LeetCode problems.**
 
